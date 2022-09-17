@@ -32,5 +32,9 @@
         "channel": "latest"
       }
     ]
+  },
+  "dependencies": {
+    "electron-log": "^4.4.8",
+    "electron-updater": "^5.2.1"
   }
 }
