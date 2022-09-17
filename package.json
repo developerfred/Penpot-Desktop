@@ -1,0 +1,12 @@
+{
+  "name": "penpot-desktop",
+  "version": "0.0.1",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "KorbsStudio",
+  "devDependencies": {
+    "electron": "^18.0.0"
+  }
+}
