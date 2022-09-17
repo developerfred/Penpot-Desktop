@@ -23,7 +23,7 @@ function createWindow () {
     transparent: true,
     frame: global.frame,
     titleBarStyle: global.titleBarStyle,
-    trafficLightPosition: { x: 25, y: 25 },
+    trafficLightPosition: { x: 10, y: 10 },
     titleBarOverlay: {
       color: '#303136',
       symbolColor: 'white'
