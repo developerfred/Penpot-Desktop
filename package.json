@@ -7,7 +7,8 @@
   },
   "author": "KorbsStudio",
   "devDependencies": {
-    "electron": "^18.0.0"
+    "electron": "^18.0.0",
+    "electron-builder": "^23.3.3"
   },
   "build": {
     "appId": "com.korbsstudio.penpot",
@@ -25,10 +26,10 @@
     },
     "publish": [
       {
-      "provider": "generic",
-      "url": "https://updates.korbsstudio.com/penpot-desktop/",
-      "channel": "latest"
-      }  
+        "provider": "generic",
+        "url": "https://updates.korbsstudio.com/penpot-desktop/",
+        "channel": "latest"
+      }
     ]
   }
 }
