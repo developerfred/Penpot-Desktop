@@ -8,5 +8,27 @@
   "author": "KorbsStudio",
   "devDependencies": {
     "electron": "^18.0.0"
+  },
+  "build": {
+    "appId": "com.korbsstudio.penpot",
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage",
+      "category": "Network",
+      "synopsis": "Use PenPot, right from your desktop",
+      "description": "Use PenPot, right from your desktop"
+    },
+    "publish": [
+      {
+      "provider": "generic",
+      "url": "https://updates.korbsstudio.com/penpot-desktop/",
+      "channel": "latest"
+      }  
+    ]
   }
 }
