@@ -27,9 +27,7 @@ function inc() {
         else if (navigator.userAgent.indexOf == 'Windows'){ // Move away from titlebar buttons
             document.querySelector("#app > section > div.dashboard-content > header > a").style.marginRight = '150px';
         }
-        else {
-            document.querySelector("#workspace > header > div.left-area").style.marginLeft = '100px'
-        }
+        else {}
         `
     )}, 2500);
     setTimeout(() => {
