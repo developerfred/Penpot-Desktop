@@ -2,7 +2,7 @@
 ![Board-1](https://user-images.githubusercontent.com/51213244/190878571-7789bfe9-7203-4f63-9502-b4d4324de0ef.png)
 
 ## To Do
- - Allow users to change the `src` of the `WebView` if they're selfhosting Penpot
+ - ([Successfully Tested](https://i.imgur.com/ZQo7h6x.gifv)) Allow users to change the `src` of the `WebView` if they're selfhosting Penpot
  - Add App Settings: 
    - Toggle Splash
    - Appearance
