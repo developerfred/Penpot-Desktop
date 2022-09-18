@@ -5,6 +5,8 @@ webview, .splash {
     width: 100%;
     height: 100%;
 }
+
+/* Splash */
 .splash {
     align-items: center;
     text-align: center;
@@ -25,4 +27,50 @@ webview, .splash {
 @keyframes svgZoom {
     from {transform: translate(-50%, -50%) scale(0.7);}
     to {transform: translate(-50%, -50%) scale(1);}
+}
+
+/* Settings */
+.settings {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    border: 1px black solid;
+    border-radius: 6px;
+    height: max-content;
+    display: none;
+}
+.settings-header svg {width: 14px;height: 14px;position: absolute;right: 22px;top: 20px;cursor: pointer;background: #dedeff;padding: 8px 8px;border-radius: 35px;}
+
+.settings-header {border-bottom: 1px black solid;display: flex;}
+
+.settings-header h1 {font-size: 24px;padding: 0px 0px 0px 24px;}
+
+.settings-content {padding: 0px 24px;overflow: scroll;height: calc(100% - 66px);}
+
+.settings-content::-webkit-scrollbar {background: transparent;width: 22px;;;;}
+
+.settings-content::-webkit-scrollbar-thumb {background: rgb(0 0 0 / 25%);border-radius: 50px;border: 8px white solid;}
+
+h2 {font-size: 18px;}
+
+input {border-radius: 6px;border: none;background: #deddfe;color: black;padding: 8px 12px;}
+
+button {border: none;background: #9b98ff;padding: 8px 12px;color: white;border-radius: 6px;cursor: pointer;}
+
+blur#for-settings {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    backdrop-filter: blur(10px);
+}
+
+p#note {
+    font-size: 14px;
 }
