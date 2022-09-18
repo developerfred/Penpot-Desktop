@@ -1,4 +1,4 @@
-const {app, BrowserWindow, dialog} = require('electron')
+const {app, BrowserWindow, dialog, Menu, MenuItem} = require('electron')
 const {autoUpdater} = require("electron-updater");
 const log = require('electron-log');
 autoUpdater.logger = log;
@@ -29,7 +29,7 @@ autoUpdater.on('update-downloaded', (event, releaseNotes, releaseName) => {
   dialog.showMessageBox(dialogOpts).then((returnValue) => {if (returnValue.response === 0) autoUpdater.quitAndInstall()})
 })
 
-function createWindow () {
+const launch = () => {
   const mainWindow = new BrowserWindow({
     width: 1200,
     height: 800,
@@ -46,6 +46,41 @@ function createWindow () {
       webviewTag: true
     }
   })
+
   mainWindow.loadFile('index.html')
+
+  const menu = new Menu()
+  menu.append(new MenuItem({
+    label: 'Penpot',
+      submenu: [
+      {
+        label: 'Open Settings',
+        accelerator: process.platform === 'darwin' ? 'Cmd+.' : 'Ctrl+.',
+        click: () => {
+          mainWindow.webContents.executeJavaScript(`
+            document.querySelector('#for-settings').style.display = 'inherit'; document.querySelector('body > div.settings').style.display = 'inherit';
+          `)
+        }
+      },
+      { type: 'separator'},
+      { role: 'reload' },
+      { role: 'toggleDevTools' },
+      { role: 'resetZoom' },
+      { role: 'zoomIn' },
+      { role: 'zoomOut' },
+      { type: 'separator'},
+      {
+        label: 'Quit',
+        accelerator: process.platform === 'darwin' ? 'Cmd+Q' : 'Ctrl+Q',
+        hide: true,
+        click: () => { app.quit() }
+      }
+    ],
+  }))
+
+  Menu.setApplicationMenu(menu)
 }
-app.whenReady().then(() => {createWindow();autoUpdater.checkForUpdatesAndNotify();})
+
+
+
+app.whenReady().then(() => {launch();autoUpdater.checkForUpdatesAndNotify();})
