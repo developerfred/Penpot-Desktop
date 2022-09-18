@@ -10,8 +10,8 @@ This is very new, so it's not perfect, but it works(at least).
 - Use Penpot Desktop on your own server if you're self-hosting
 
 ## Downloads
-[Windows](https://updates.korbsstudio.com/penpot-desktop/penpot-desktop%20Setup%200.0.1.exe) (Auto update included)
+[Windows](https://updates.korbsstudio.com/penpot-desktop/penpot-desktop%20Setup%200.0.2.exe) (Auto update included)
 
-[macOS](https://updates.korbsstudio.com/penpot-desktop/penpot-desktop-0.0.1.dmg) (No auto updates)
+[macOS](https://updates.korbsstudio.com/penpot-desktop/penpot-desktop-0.0.2.dmg) (No auto updates)
 
-[Linux](https://updates.korbsstudio.com/penpot-desktop/penpot-desktop-0.0.1.AppImage) (Auto update included)
+[Linux](https://updates.korbsstudio.com/penpot-desktop/penpot-desktop-0.0.2.AppImage) (Auto update included)
